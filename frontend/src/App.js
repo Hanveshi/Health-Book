@@ -5,6 +5,8 @@ import "./App.css";
 import DoctorList from "./components/DoctorList";
 import DoctorProfile from "./components/DoctorProfile";
 import BookingForm from "./components/BookingForm";
+import MyAppointments from "./components/MyAppointments";
+import HealthRecords from "./components/HealthRecords";
 import Navbar from "./components/Navbar";
 import { Moon, Sun } from "lucide-react";
 
@@ -92,6 +94,8 @@ function App() {
               <Route path="/" element={<DoctorList />} />
               <Route path="/doctor/:id" element={<DoctorProfile />} />
               <Route path="/book/:id" element={<BookingForm />} />
+              <Route path="/appointments" element={<MyAppointments />} />
+              <Route path="/health-records" element={<HealthRecords />} />
             </Routes>
           </main>
           <ScrollToTop />

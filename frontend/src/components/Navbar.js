@@ -37,12 +37,26 @@ const Navbar = () => {
             >
               Find Doctors
             </Link>
-            <button className="text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+            <Link
+              to="/appointments"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                location.pathname === '/appointments'
+                  ? 'text-medical-600 dark:text-medical-400 bg-medical-50 dark:bg-medical-900/30'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400'
+              }`}
+            >
               My Appointments
-            </button>
-            <button className="text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+            </Link>
+            <Link
+              to="/health-records"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                location.pathname === '/health-records'
+                  ? 'text-medical-600 dark:text-medical-400 bg-medical-50 dark:bg-medical-900/30'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400'
+              }`}
+            >
               Health Records
-            </button>
+            </Link>
           </div>
 
           {/* Theme Toggle & Mobile Menu */}
@@ -74,12 +88,18 @@ const Navbar = () => {
           >
             Find Doctors
           </Link>
-          <button className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+          <Link
+            to="/appointments"
+            className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 hover:bg-slate-50 dark:hover:bg-slate-800"
+          >
             My Appointments
-          </button>
-          <button className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 hover:bg-slate-50 dark:hover:bg-slate-800">
+          </Link>
+          <Link
+            to="/health-records"
+            className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 hover:bg-slate-50 dark:hover:bg-slate-800"
+          >
             Health Records
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
